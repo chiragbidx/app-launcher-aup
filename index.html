@@ -555,5 +555,28 @@ document.getElementById("contact-form-data").addEventListener("submit", function
       <span>Built with Panda</span>
     </a>
 
+    <script>
+document.addEventListener("click", function (e) {
+  const img = e.target.closest("img");
+  if (!img) return;
+
+  // Optional: ignore tiny icons
+  if (img.naturalWidth < 40 || img.naturalHeight < 40) return;
+
+  window.parent.postMessage(
+    {
+      type: "IMAGE_SELECTED",
+      payload: {
+        url: img.currentSrc || img.src,
+        width: img.naturalWidth,
+        height: img.naturalHeight,
+        alt: img.alt || ""
+      }
+    },
+    "https://panda.new/"
+  );
+});
+</script>
+
 </body>
 </html>
