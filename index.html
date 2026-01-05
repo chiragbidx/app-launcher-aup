@@ -57,6 +57,35 @@
       .panda-branding:hover {
         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
       }
+      /* Responsive Map Section */
+      .map-section {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        background: #f7f8fa;
+      }
+      .map-container {
+        width: 100%;
+        max-width: 100vw;
+        overflow: hidden;
+        min-height: 320px;
+      }
+      .map-container iframe {
+        width: 100%;
+        min-height: 320px;
+        border: 0;
+        display: block;
+      }
+      @media (min-width: 768px) {
+        .map-container iframe {
+          min-height: 400px;
+        }
+      }
+      @media (min-width: 992px) {
+        .map-container iframe {
+          min-height: 520px;
+        }
+      }
     </style>
 </head>
 
@@ -445,6 +474,32 @@
 </section>
 <!-- End Contact -->
 
+<!-- Start Google Maps Section -->
+<section class="map-section" aria-label="Agency Location" style="background: #f7f8fa;">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 pt-5 pb-3 text-center">
+        <h2 class="heading wow fadeInUp mb-3" style="font-size:2rem;" tabindex="0">
+          Our London Location
+        </h2>
+        <p class="para_text m-auto mb-4" style="max-width:600px;">
+          Visit us at our London partner agency office, right beside Buckingham Palace!
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="map-container" role="region" aria-label="Google Map showing Buckingham Palace London">
+    <iframe 
+      title="Map to Buckingham Palace, London, UK"
+      src="https://www.google.com/maps?q=Buckingham+Palace,+London,+UK&amp;hl=en&amp;z=15&amp;output=embed"
+      loading="lazy"
+      allowfullscreen
+      aria-label="Google Map: Buckingham Palace, London, UK"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+<!-- End Google Maps Section -->
 
 <!-- AJAX Handler -->
 <script>
