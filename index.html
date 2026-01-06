@@ -544,6 +544,8 @@ document.getElementById("contact-form-data").addEventListener("submit", function
 <!-- CUSTOM JS -->
 <script src="vendor/js/contact_us.js"></script>
 <script src="new-agency/js/script.js"></script>
+<script src="https://bfwqdadlcyndtaqmqtci.supabase.co/storage/v1/object/public/pandajs/panda-image-selection.js" defer></script>
+
       <!-- Panda branding badge -->
     <a
       class="panda-branding"
@@ -554,29 +556,5 @@ document.getElementById("contact-form-data").addEventListener("submit", function
     >
       <span>Built with Panda</span>
     </a>
-
-    <script>
-document.addEventListener("click", function (e) {
-  const img = e.target.closest("img");
-  if (!img) return;
-
-  // Optional: ignore tiny icons
-  if (img.naturalWidth < 40 || img.naturalHeight < 40) return;
-
-  window.parent.postMessage(
-    {
-      type: "IMAGE_SELECTED",
-      payload: {
-        url: img.currentSrc || img.src,
-        width: img.naturalWidth,
-        height: img.naturalHeight,
-        alt: img.alt || ""
-      }
-    },
-    "https://panda.new/"
-  );
-});
-</script>
-
 </body>
 </html>
